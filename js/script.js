@@ -5,7 +5,7 @@ const fm = document.forms.main;
  const content = document.querySelector('.content');
 
  const sendBtn = fm.mainSubmit;
- console.log(inp.value)
+ 
 
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
@@ -20,15 +20,15 @@ const octokit = new Octokit({
 		}
 	 });
 	 let repositories = result.data;
-	 console.log(repositories)//result.data this is array
+	 //console.log(repositories)//result.data this is array
 	 content.innerHTML = repositories.map(el=>`<div class='rep'><p>${el.name}</p></div>`);
  fm.addEventListener('submit', function(e){
 	e.preventDefault();
-	console.log('SubmitForm');
+	//console.log('SubmitForm');
 	
 	if(inp.value !== ''){
       const reposToDisplay = repositories.filter( repository => repository.name.substring(0, 3) === inp.value.substring(0, 3))
-		console.log(reposToDisplay);
+		//console.log(reposToDisplay);
 		content.innerHTML = '';
 		content.innerHTML = reposToDisplay.map(el=>`<div class='rep'><p><span>${el.name.substring(0,3)}</span>${el.name.substring(3)}</p></div>`);
 	}
