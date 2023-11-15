@@ -20,11 +20,9 @@ const octokit = new Octokit({
 		}
 	 });
 	 let repositories = result.data;
-	 //console.log(repositories)//result.data this is array
 	 content.innerHTML = repositories.map(el=>`<div class='rep'><p>${el.name}</p></div>`);
  fm.addEventListener('submit', function(e){
 	e.preventDefault();
-	//console.log('SubmitForm');
 	
 	if(inp.value !== ''){
       const reposToDisplay = repositories.filter( repository => repository.name.substring(0, 3) === inp.value.substring(0, 3))
