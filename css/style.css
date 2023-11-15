@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+body{
+	background-color: rgb(40, 40, 40);
+	font-family: 'Raleway', sans-serif;
+}
+.content{
+	padding-left: 50px;
+	padding-top: 10px;
+}
+.wrapper{
+	padding-left: 50px;
+	padding-top: 50px;
+}
+label{
+	color: #fff;
+	font-size: 24px;
+}
+h1{
+	color: #fff;
+}
+input{
+	width: 250px;
+	height: 20px;
+}
+input:focus{
+	outline: none;
+}
+.rep p span{
+	color: yellow;
+}
+.rep p{
+   font-size: 20px;
+	color: #fff;
+}
