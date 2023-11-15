@@ -9,8 +9,8 @@ const fm = document.forms.main;
 
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	auth: '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'
-	//auth: config.SECRET_KEY
+	//auth: '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'
+	auth: config.SECRET_KEY
  });
  try{
 	const result = await octokit.request('GET /users/{username}/repos', {
