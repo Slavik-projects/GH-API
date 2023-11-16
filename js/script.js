@@ -6,7 +6,7 @@ const fm = document.forms.main;
  const sendBtn = fm.mainSubmit;
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	auth: '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'
+	//auth: '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'
  });
  
  try{
