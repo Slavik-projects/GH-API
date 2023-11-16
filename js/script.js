@@ -1,4 +1,4 @@
-
+//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
 
 const fm = document.forms.main;
  const inp = fm.mainInput;
@@ -6,7 +6,7 @@ const fm = document.forms.main;
  const sendBtn = fm.mainSubmit;
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	//auth: ''
+	auth: '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'
  });
  
  try{
