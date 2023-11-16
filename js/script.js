@@ -1,15 +1,10 @@
 //token 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
 const fm = document.forms.main;
  const inp = fm.mainInput;
-
  const content = document.querySelector('.content');
-
  const sendBtn = fm.mainSubmit;
- 
-
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	//auth: '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'
 	auth: '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'
  });
  try{
