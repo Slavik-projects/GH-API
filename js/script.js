@@ -7,10 +7,10 @@ const fm = document.forms.main;
  const sendBtn = fm.mainSubmit;
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	auth: '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'
+	auth: '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'
  });
  try{
-	const result = await octokit.request('GET /users/{username}/repos', {
+	const result = await octokit.request(`GET /users/{username}/repos`, {
 		username: 'slavik-projects',
 		headers: {
 		  'X-GitHub-Api-Version': '2022-11-28'
