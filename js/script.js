@@ -1,5 +1,4 @@
-//token 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
-// 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 
+
 
 const fm = document.forms.main;
  const inp = fm.mainInput;
@@ -7,8 +6,9 @@ const fm = document.forms.main;
  const sendBtn = fm.mainSubmit;
 import { Octokit } from "https://esm.sh/octokit";
 const octokit = new Octokit({
-	auth: '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'
+	//auth: ''
  });
+ 
  try{
 	const result = await octokit.request(`GET /users/{username}/repos`, {
 		username: 'slavik-projects',
@@ -17,6 +17,7 @@ const octokit = new Octokit({
 		}
 	 });
 	 let repositories = result.data;
+	 console.log(repositories)
 	 content.innerHTML = repositories.map(el=>`<div class='rep'><p>${el.name}</p></div>`);
  fm.addEventListener('submit', function(e){
 	e.preventDefault();
